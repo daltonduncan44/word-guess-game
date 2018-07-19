@@ -12,12 +12,14 @@ var rightWord = [];
 var wrongWord = [];
  ///dom manip
 var docUnderScore = document.getElementsByClassName("underScore");
+var docRightGuess = document.getElementsByClassName("rightGuess");
+var docWrongGuess = document.getElementsByClassName("wrongGuess")
 
 //create underscores based on length of word 
 var genUnderscore = () => {
  for (var i = 0; i < choosenWord.length; i++) {
         underScore.push("_");
-        docUnderScore[0].innerHtml = underScore.join(" ");
+       
     }
     return underScore;
 }
@@ -30,19 +32,18 @@ document.addEventListener("keypress", (event) => {
         rightWord.push(keyword);
         //re place underscores with right letter
         underScore[choosenWord.indexOf(keyword)] = keyword;
+        docUnderScore[0].innerHTML = underScore.join('  ');
+        docRightGuess[0].innerHTML = rightWord;
         //checks to see if word matched the guesses
-        if (underScore.join("") == choosenWord) {
+        if (underScore.join(" ") == choosenWord) {
             //alerts the winner
-            alert("You are a Winner")
+            alert("You are a Winner");
         }
     }
     else {
         wrongWord.push(keyword);
+        docWrongGuess[0].innerHTML = wrongWord;
     }
-
 });
-//chec if guess is right 
 
-
-//if right push to right array
-//if wrong push to wrong array
+[0].innerHTML = genUnderscore().join("  ");
