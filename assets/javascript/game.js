@@ -15,15 +15,13 @@ var genUnderscore = () => {
 }
 console.log(genUnderscore());
 //get users guess
-document.addEventListener("keypress", (event) => {
-    console.log(event);
-    });
-//chec if guess is right 
 document.addEventListener("keypress",(event) => {
-    var keycode = event.keycode;
-    var keyword = String.fromCharCode(keycode);
+    var keyword = String.fromCharCode(event.keycode);
     console.log(keyword);
-
-} 
+});
+//chec if guess is right 
+ if (keyword.indexOf(choosenWord) > -1) {
+     console.log.(true);
+ }
 //if right push to right array
 //if wrong push to wrong array
