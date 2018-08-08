@@ -1,2 +1,2 @@
 # word-guess-game
-js game hw
+This javaScript game the user user enters in letter until the goal word is guessed, similar to hangman. The game keeps track of not only your guesses but the number of wins and loses the user has gotten. 

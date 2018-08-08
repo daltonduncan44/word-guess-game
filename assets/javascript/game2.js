@@ -36,6 +36,7 @@ function winLose()
     if(winCounter === randWord.length)
     {
         alert("Winner He Wont Snap")
+        document.getElementById("win-counter").textContent = winCounter;
     }
     else if(guessesLeft === 0)
 {
@@ -63,6 +64,7 @@ if(randWord.indexOf(userGuesses) > -1)
             console.log(underScores);
             winCounter++;
             winLose();
+            
         }
     
     }
